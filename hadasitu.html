@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>肌質診断サイト</title>
+<link rel="stylesheet" href="hadasitu.css" />
+</head>
+<body>
+<div id="app">
+  <!-- Top Page -->
+  <section id="top-page" class="page active">
+    <div class="main-view">
+      <h1>もう、肌質探しに迷わない。</h1>
+      <p>独自の5指標肌分析で、あなたの「本当の肌の個性」を解き明かす。22の質問に答えるだけで、あなただけのスキンケアプランが見つかります。</p>
+      <button id="start-btn">さっそく無料で肌質診断をはじめる</button>
+    </div>
+    <div class="empathy-section">
+      <h2>こんなお悩み、ありませんか？</h2>
+      <ul>
+        <li>✓ 「乾燥肌？脂性肌？」自分の肌タイプが、実はよく分からない。</li>
+        <li>✓ 話題のスキンケアを試しても、期待した効果が出なかった。</li>
+        <li>✓ 季節や体調によって、肌の状態がコロコロ変わる。</li>
+        <li>✓ 本当に自分に合ったケアだけを知って、時間もお金も無駄にしたくない。</li>
+      </ul>
+    </div>
+    <div class="solution-section">
+      <h2>“なんとなく”のスキンケアを、今日で終わりに。</h2>
+      <p>当サイトの肌質診断は、「乾燥肌」や「脂性肌」といった単純な分類では終わりません。肌を構成する5つの重要な指標（水分量・皮脂量・敏感度・色素沈着・ハリ）を多角的に分析することで、一人ひとり異なる肌のプロフィールを、驚くほど詳細に描き出します。なぜ乾燥するのか。なぜベタつくのか。その「なぜ？」を知ることが、美肌への最短ルートです。</p>
+    </div>
+    <div class="steps-section">
+      <h2>診断は、わずか3分で完了</h2>
+      <ol>
+        <li><strong>STEP 1：</strong>質問に回答 (ライフスタイルや肌感覚に関する22の質問に、直感で答えるだけ。)</li>
+        <li><strong>STEP 2：</strong>結果を分析 (独自のアルゴリズムが、あなたの回答を5つの指標軸で瞬時に分析します。)</li>
+        <li><strong>STEP 3：</strong>あなたの肌を知る (あなただけの肌ステータスと、明日から実践できるパーソナルな美容アドバイスをご確認ください。)</li>
+      </ol>
+    </div>
+    <div class="final-cta">
+      <h2>さあ、本当のあなたの肌に会いに行こう。</h2>
+      <button id="start-btn-bottom">無料診断をスタートする</button>
+    </div>
+  </section>
+
+  <!-- Diagnosis Page -->
+  <section id="diagnosis-page" class="page">
+    <div class="progress-bar-container">
+      <div id="progress-bar"></div>
+      <div id="progress-text">0 / 22</div>
+    </div>
+    <div id="question-container">
+      <!-- Question and options will be dynamically inserted here -->
+    </div>
+  </section>
+
+  <!-- Result Page -->
+  <section id="result-page" class="page">
+    <div id="result-summary-container">
+      <div class="summary-header">
+        <h2 id="result-title">あなたの肌タイプは「<strong></strong>」の可能性が高いです</h2>
+        <p id="result-description"></p>
+      </div>
+      <div class="summary-content">
+        <div class="summary-section">
+          <h4>肌の特徴</h4>
+          <p id="summary-characteristics"></p>
+        </div>
+        <div class="summary-section">
+          <h4>ケアの基本方針</h4>
+          <p id="summary-care-policy"></p>
+        </div>
+        <p class="bridge-text">あなたの肌がなぜこの状態になっているのか、下のステータス詳細で詳しく見ていきましょう。</p>
+      </div>
+    </div>
+
+    <div id="status-details">
+      <!-- Five indicator boxes will be inserted here -->
+    </div>
+    <div id="advice-section">
+      <h3>あなたへのおすすめアドバイス</h3>
+      <div id="advice-container">
+        <!-- Advice blocks will be inserted here -->
+      </div>
+    </div>
+    <button id="restart-btn">もう一度診断する</button>
+  </section>
+</div>
+
+<script src="hadasitu.js"></script>
+</body>
+</html>
