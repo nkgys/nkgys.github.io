@@ -417,12 +417,18 @@ ol {
   }
 
   button {
-    padding: 12px 20px;
+    padding: 16px 24px; /* タッチターゲットサイズを44px以上に */
     font-size: 1em;
+    min-height: 44px; /* 最小高さを確保 */
   }
 
   #question-container {
     padding: 20px;
+  }
+
+  .option {
+    padding: 16px; /* オプションもタッチしやすく */
+    min-height: 48px;
   }
 
   #result-summary-container {
@@ -436,4 +442,17 @@ ol {
   #advice-section {
     padding: 20px;
   }
+  /* --- スマホ表示用の文字サイズ調整 --- */
+#result-title {
+  font-size: 1.5em; /* PCの2emから少し小さく */
+}
+
+#result-summary-container h4, #advice-section h3, .advice-box h4 {
+  font-size: 1.1em; /* 各セクションの見出しを少し調整 */
+}
+
+/* 本文やリストなど、全体的な文字サイズを少し小さくして読みやすく */
+.summary-content p, .status-box p, .advice-box p, .advice-box li {
+  font-size: 0.95em;
+}
 }
