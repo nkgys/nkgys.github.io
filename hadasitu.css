@@ -396,3 +396,44 @@ ol {
     padding: 15px;
   }
 }
+
+/* Extended Responsive Design for Mobile */
+@media (max-width: 768px) {
+  #app {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .main-view h1 {
+    font-size: 2em;
+  }
+
+  .main-view p {
+    font-size: 1em;
+  }
+
+  .empathy-section, .solution-section, .steps-section, .final-cta {
+    padding: 10px;
+  }
+
+  button {
+    padding: 12px 20px;
+    font-size: 1em;
+  }
+
+  #question-container {
+    padding: 20px;
+  }
+
+  #result-summary-container {
+    padding: 15px 20px;
+  }
+
+  #status-details {
+    gap: 10px;
+  }
+
+  #advice-section {
+    padding: 20px;
+  }
+}

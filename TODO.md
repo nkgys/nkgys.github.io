@@ -1,0 +1,5 @@
+- [x] Extend @media query in hadasitu.css to max-width: 768px and add mobile optimizations
+- [x] Adjust #app for mobile: max-width: 100%; padding: 10px;
+- [x] Adjust font sizes for mobile: h1 to 2em, p to 1em
+- [x] Reduce padding for sections, buttons, containers in mobile
+- [x] Test the changes in browser
