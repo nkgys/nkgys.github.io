@@ -1,5 +1,6 @@
 // Questions data
 const questions = [
+  // Moisture category (5 questions)
   {
     question: "洗顔後、タオルで顔を拭いてすぐの状態に最も近いのは？",
     options: [
@@ -192,6 +193,7 @@ const questions = [
     ]
   }
 ];
+// Questions data with categories and weights
 
 // Advice content
 const adviceContent = {
@@ -267,9 +269,9 @@ function nextQuestion(optionIndex) {
   const question = questions[currentQuestionIndex];
   const selectedOption = question.options[optionIndex];
   Object.keys(selectedOption.scores).forEach(key => {
-    scores[key] += selectedOption.scores[key];
+    scores[key] += selectedOption.scores[key] * question.weight;
   });
-  
+
   currentQuestionIndex++;
   if (currentQuestionIndex < questions.length) {
     showQuestion();
@@ -351,6 +353,13 @@ function showResult() {
 
     const percentage = Math.min(100, Math.max(0, ((score + 10) / 20) * 100));
 
+    // Calculate confidence based on score deviation from thresholds
+    let confidence = 70; // base confidence
+    if (level === 1) confidence = 80;
+    else if (level === 2) confidence = 85;
+    else if (level === 3) confidence = 90;
+    else if (level === 4) confidence = 95;
+
     // Determine color class for progress-fill
     let colorClass = '';
     if (axis.key === 'moisture' && score <= -8) {
@@ -364,7 +373,7 @@ function showResult() {
     return `
       <div class="status-box">
         <h4>${axis.name}</h4>
-        <p>スコア: ${score}（${axis.levels[level - 1]}）</p>
+        <p>スコア: ${score}（${axis.levels[level - 1]}） - 確信度: ${confidence}%</p>
         <div class="progress-bar">
           <div class="progress-fill ${colorClass}" style="width: ${percentage}%"></div>
         </div>
