@@ -437,6 +437,7 @@ ol {
 
   #status-details {
     gap: 10px;
+    flex-wrap: wrap; /* はみ出し防止に折り返し */
   }
 
   #advice-section {
@@ -445,14 +446,17 @@ ol {
   /* --- スマホ表示用の文字サイズ調整 --- */
 #result-title {
   font-size: 1.5em; /* PCの2emから少し小さく */
+  word-break: break-word; /* はみ出し防止 */
 }
 
 #result-summary-container h4, #advice-section h3, .advice-box h4 {
   font-size: 1.1em; /* 各セクションの見出しを少し調整 */
+  word-break: break-word; /* はみ出し防止 */
 }
 
 /* 本文やリストなど、全体的な文字サイズを少し小さくして読みやすく */
 .summary-content p, .status-box p, .advice-box p, .advice-box li {
   font-size: 0.95em;
+  word-break: break-word; /* はみ出し防止 */
 }
 }
